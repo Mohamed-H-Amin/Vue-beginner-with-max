@@ -1,0 +1,21 @@
+.parent{
+    display: flex;
+}
+.child{
+    width: 30%;
+    height: 300px;
+    background-color: gray;
+    margin: auto;
+}
+.red{
+    background-color: red;
+}
+.green{
+    background-color: green;
+}
+.blue{
+    background-color: blue;
+}
+.text-center{
+    text-align: center;
+}

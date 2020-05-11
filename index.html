@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="img/vue-favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Learn Vue.js | 💰</title>
+</head>
+<body>
+    <div id="my_app" class="container">
+        <h1 class="text-center">Lesson # 40</h1>
+        <p v-for="(skill , index) in skills"> {{ skill }} {{ index }}</p>
+        <button @click="skills.push('jquery')">Add Value</button>
+        <template v-for="child in childs">
+            <div class="text-center">My Child {{ child.name }}</div>
+            <div>Age : {{ child.age}}</div>
+            <div>Color : {{ child.color}}</div>
+        </template>
+        <hr>
+        <template v-for="child in childs">
+            <div v-for="(value, key , index) in child">
+                {{ key }} : {{ value }}
+            </div>
+        </template>
+        <hr>
+        <span v-for = "n in 100"> {{ n }} </span>
+        <hr>
+        <div style="font-weight: bolder;" class="text-center">
+            <p> v-on:click ==> @click</p>
+            <p>v-bind: ==> :</p>
+            <p>v-model ==> v-model</p>
+            <p>v-if</p>
+            <p>v-else</p>
+            <p>v-show</p>
+        </div>
+    </div>
+
+    <script src="js/vue.js"></script>
+    <script>
+    new Vue({
+        el: '#my_app',
+        data: {
+            skills: ['Html', 'Css', 'Bootstrap', 'Vuejs'],
+            childs: [
+                {name: 'Lara', age: 5 ,color: 'White'},
+                {name: 'Talia', age: 3 ,color: 'Browen'},
+            ],
+        },
+        watch: {
+        },
+        computed:{
+        },
+        methods: {
+        }
+    })
+    </script>
+</body>
+</html>
